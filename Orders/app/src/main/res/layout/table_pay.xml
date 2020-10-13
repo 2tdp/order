@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/etPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Khách hàng trả" />
+
+    <TextView
+        android:id="@+id/tvPay"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_below="@+id/etPay"
+        android:layout_centerHorizontal="true"
+        android:background="@color/purplehin"
+        android:padding="4dp"
+        android:paddingLeft="10dp"
+        android:hint="Thối lại cho khách"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="datnt.com.orders">
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/restaurant"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Orders"></activity>
+        <activity android:name=".ListOrders" />
+        <activity android:name=".Order.DetailOrder" />
+        <activity android:name=".Order.ListBat" />
+        <activity android:name=".Pay" />
+        <activity
+            android:name=".Products.AddProduct"
+            tools:ignore="InnerclassSeparator"
+            tools:targetApi="jelly_bean">
+            <intent-filter>
+                <action android:name="android.media.action.IMAGE_CAPTURE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Users.AddUser" />
+        <activity android:name=".Products.ListProducts" />
+        <activity android:name=".Users.ListUser" />
+        <activity
+            android:name=".Order.AddOrder"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity android:name=".Bep" />
+        <activity android:name=".ThuNgan" />
+        <activity android:name=".PhucVu" />
+        <activity android:name=".QuanLy" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".AlarmBroadcastReverce"
+            android:permission="@string/app_name">
+            <intent-filter>
+                <action android:name="alarm" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="datnt.com.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

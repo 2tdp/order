@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/border"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cbPr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/tvNamePr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/tvPricePr"
+        android:layout_toRightOf="@+id/cbPr"
+        android:text="Món"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/tvPricePr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/etQuantity"
+        android:text="Giá"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/etQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:hint="Số lượng"
+        android:inputType="number"
+        android:textAlignment="center" />
+
+</RelativeLayout>
